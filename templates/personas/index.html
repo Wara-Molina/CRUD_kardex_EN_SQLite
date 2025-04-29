@@ -9,8 +9,8 @@
         <th scope="col">Nombre</th>
         <th scope="col">Telefono</th>
         <th scope="col">Fecha Nac</th>
-        <th scope="#" class="btn btn-warning ">Editar</th>
-        <th scope="#" class="btn btn-danger">Eliminar</th>
+        <th scope="#"></th>
+        <th scope="#"></th>
       </tr>
     </thead>
     <tbody>
@@ -20,8 +20,8 @@
         <td>{{item['nombre']}}</td>
         <td>{{item['telefono']}}</td>
         <td>{{item['fecha_nac']}}</td>
-        <td><a href="#" class="btn btn-warning">Editar</a></td>
-        <td><a href="#" class="btn btn-danger">Eliminar</a></td>
+        <td><a href="/personas/edit/{{item['id']}}" class="btn btn-warning">Editar</a></td>
+        <td><a href="/personas/delete/{{item['id']}}" onclick="return(confirm('Esta seguro?'))" class="btn btn-danger">Eliminar</a></td>
       </tr>
       {% endfor %}
     </tbody>
